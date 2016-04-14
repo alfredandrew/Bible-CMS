@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>Bible</title>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="<?php echo base_url()?>/assets/css/bootstrap.min.css" type="text/css"> 
+<link rel="stylesheet" href="<?php echo base_url()?>/assets/css/owl.carousel.css" type="text/css">
+<link rel="stylesheet" href="<?php echo base_url()?>/assets/css/style.css" type="text/css">
+<link rel="stylesheet" href="<?php echo base_url()?>/assets/css/responsive.css" type="text/css">
+
+<!--[if lt IE 9]>
+	<script src="js/html5.js" type="text/javascript"></script>
+	<link href="css/ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<!-- statrt ebook css and js -->
+<meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui,maximum-scale=2">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui,maximum-scale=1">
+  <meta http-equiv="cleartype" content="on">
+
+ <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo base_url();?>assets/ebook/img/touch/apple-touch-icon-144x144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo base_url();?>assets/ebook/img/touch/apple-touch-icon-114x114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo base_url();?>assets/ebook/img/touch/apple-touch-icon-72x72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="<?php echo base_url();?>assets/ebook/img/touch/apple-touch-icon-57x57-precomposed.png">
+  <link rel="shortcut icon" sizes="196x196" href="<?php echo base_url();?>assets/ebook/img/touch/touch-icon-196x196.png">
+  <link rel="shortcut icon" href="<?php echo base_url();?>assets/ebook/img/touch/apple-touch-icon.png">
+<link rel="stylesheet" href="<?php echo base_url();?>assets/ebook/css/normalize.css">
+  <link rel="stylesheet" href="<?php echo base_url();?>assets/ebook/wow_book/wow_book.css" type="text/css" />
+ <link rel="stylesheet" href="<?php echo base_url();?>assets/ebook/css/main.css">
+<script src="<?php echo base_url()?>/assets/js/jquery.js" type="text/javascript"></script> 
+
+  <!-- <script src="js/main.js"></script> -->
+
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="<?php echo base_url();?>assets/ebook/img/touch/apple-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileColor" content="#222222">
+  
+<script>
+
+    $(function(){
+      if(typeof pdfurl !== 'undefined')
+      {
+        
+      var bookOptions = {
+         height   : 50
+        ,width    : 80
+        //,maxWidth : 1000
+        // ,maxHeight : 800
+
+        ,centeredWhenClosed : true
+        ,hardcovers : true
+        ,toolbar : "first, back, next, last, toc, zoomin, zoomout, slideshow, flipsound, fullscreen, thumbnails, download"
+        ,thumbnailsPosition : 'left'
+        ,responsiveHandleWidth : 50
+
+        //,lightbox: "#show_book" // "#show_book" does not exist but we will trigger the lightbox via javascript
+        // ,toolbarLightboxPosition: "top" // default "bottom"
+
+        // for pdf files, uncomment the tag script that loads the library "pdf.js".
+        // Then uncomment the line below. The pdf and your webpage must be on the same domain
+        ,pdf: "../"+pdfurl
+
+        // Uncomment the option toc to create a Table of Contents
+        // ,toc: [                    // table of contents in the format
+        //  [ "Introduction", 2 ],  // [ "title", page number ]
+        //  [ "First chapter", 5 ],
+        //  [ "Go to codecanyon.net", "http://codecanyon.net" ] // or [ "title", "url" ]
+        // ]
+      };
+
+      $('#book').wowBook( bookOptions ); // create the book
+
+      var book=$.wowBook("#book"); // get book object instance
+     $("#book").wowBook("prop", "pageHeight");
+      //book.showLightbox();
+
+      $(".wowbook-lightbox > .wowbook-close").remove(); // remove lightbox's close button
+    }
+    })
+  </script>
+  <!-- uncomment de line below if you need pdf support. And set the option "pdf" in the configuration further below -->
+ 
+  <!-- statrt ebook css and js -->
+</head>
+   
+<body>
+<div id="wrapper">	
+  <header id="header">
+  <div class="headerTopStrip">
+  <div class="container">
+  <div class="row">
+  <div class="col-sm-4 one">
+  <div class="social">
+  <a class="first" href="#"><img src="<?php echo base_url()?>/assets/images/facebook.png"></a>
+  <a href="#"><img src="<?php echo base_url()?>/assets/images/twitter.png"></a>
+  <a href="#"><img src="<?php echo base_url()?>/assets/images/google.png"></a>
+  <a href="#"><img src="<?php echo base_url()?>/assets/images/youtube.png"></a>
+  
+  </div>
+  </div>
+  
+  <div class="col-sm-4 two">
+   <div class="headerLeft">
+   <span class="phone">707-505-8008</span>
+  <a class="email" href="mailto:sales@omnisourcer.com">info@goldbible.com</a> 
+  </div>
+  </div>
+  
+ <div class="col-sm-4 three">
+   <div class="logins">
+   <input name="" type="button" class="btn Register" value="Register Now">   <input name="" type="button" class="btn Client_Login" value="Client Login">
+
+  </div>
+  </div>
+  </div>
+  </div>
+   <!--/.container --> 
+  </div>
+   <!--/.headerTopStrip --> 
+   <div class="logoAndNavBar">
+   <div class="container cf">
+   <div class="navbar-header"> <a class="navbar-brand" href="<?php echo base_url()?>" title="omni"><img src="<?php echo base_url()?>/assets/images/logo.png" alt="omni" title="omni" /></a>
+   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span>  <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+   </div>
+   <!--/.logobar --> <div class="navbar-collapse collapse">
+   <ul class="nav navbar-nav navbar-right">
+   <li><a href="<?php echo base_url()?>">home</a></li>
+   <li><a href="#">Books</a></li>
+   <li><a href="#">Verses</a></li>
+   <li><a href="#">Chapters</a></li>
+   <li><a href="#">Contact</a></li>
+   <li><a href="#">Download</a></li>
+   <li><a class="bdr" href="#">Donate Now</a></li>
+    <li class="dropdown">
+					<a href="#" class="dropdown-toggle last_a" data-toggle="dropdown"><span class="glyphicon glyphicon-search"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li>
+                          <form class="navbar-form navbar-left" role="search">
+                              <div class="form-group">
+                              <input class="form-control ss" placeholder="Search" type="text">
+                              </div>
+                              <button type="submit" class="btn started sear">Submit</button>
+                          </form>
+                      	</li>
+					
+					</ul>
+                    </li>
+   
+   
+   
+   </ul>
+   </div>       <!--/.navbar-collapse --> 
+   </div>
+   <!--/.container --> 
+   </div>
+   <!--/.logoAndNavBar --> 
+   </header>  
+  <!--/#header -->
